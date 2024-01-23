@@ -1,0 +1,39 @@
+/* ===== BASE SITE CSS START ===== */
+ *, *::before, *::after{
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+ /* font-family: 'Jost', sans-serif;
+ */
+
+/*  font-family: 'Open Sans', sans-serif;
+ */
+ h1{
+    font-family: 'Jost', sans-serif;
+ }
+
+ p{
+    font-family: 'Open Sans', sans-serif;
+ }
+ /* ===== BASE SITE CSS END ===== */
+
+ /* SECTION KOM HURTIGT I GANG */
+
+ .start-now{
+    width: 100%;
+    margin-left: 15px;
+    margin-top: 40px;
+    
+ }
+
+ .head-start{
+    color: #00AAA9;
+    font-size: 20px;
+ }
+
+ .txt-start{
+    font-size: 12px;
+    width: 100%;
+ }
+
