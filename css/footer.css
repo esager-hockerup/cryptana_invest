@@ -1,6 +1,6 @@
 footer {
     background-color: #00AAA9;
-    height: auto; 
+    height: 30%; 
     width: 100%;
 }
 
@@ -65,38 +65,23 @@ footer {
 
 
 
-@media only screen and (min-width: 800px){
-    footer{
-        width: 100%;
-        margin-bottom: 0px;
+@media only screen and (min-width: 800px)
+{
+    footer {
+        height: 40%; 
+        padding-top: 20px;
     }
-      .wrapper-foot{
-        width: 100%;
+    .footer-wrap{
+       
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) ) ;
+            
+    }
+
+    .contact-info, .footer-head{
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-    }  
-
-    .contact, .logo-footer{
-        margin-top: auto;
-        margin-bottom: 0 auto;
-    
-    }
-    
-    .icons-footer{
-        margin-top: auto;        
-        margin-bottom: auto;
-    }
-    
-    .contact{
-        margin-top: 60px;
-    }
-
-
-    
-    .footer-img{
-        width: 180px;
-        height: auto;
-        margin-bottom: 30px;
+        text-align: start;
     }
 }
