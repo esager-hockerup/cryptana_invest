@@ -21,7 +21,6 @@
  /* SECTION KOM HURTIGT I GANG */
 
  .start-now{
-    width: 100%;
     margin-left: 15px;
     margin-top: 40px;
     
@@ -36,4 +35,21 @@
     font-size: 12px;
     width: 100%;
  }
+
+.btn-start{
+   background-color:#5CD09A ;
+   font-size: 14px;
+   height: 40px;
+   width: 340px;
+   border: 0;
+   border-radius: 25px;
+   margin: auto;
+   font-family: 'Open Sans', sans-serif;
+   color: white;
+   text-transform: uppercase;
+   cursor: pointer;
+   font-weight: 500;
+   margin-top: 20px;
+   margin-bottom: 50px;
+}
 

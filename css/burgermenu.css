@@ -63,6 +63,7 @@ nav{
     align-items: center;
     line-height: 70px;
     justify-content: center;
+    z-index: 3;
 }
 
 .nav-txt {
