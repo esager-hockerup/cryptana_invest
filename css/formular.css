@@ -27,12 +27,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 input {
     display: block;
     margin-bottom: 30px;
-    width: 340px;
+    width: 90vw;
     height: 40px;
     border-radius: 25px; 
     border: 1px solid #00AAA9;
@@ -47,7 +48,7 @@ input {
 textarea{
     display: block;
     margin-bottom: 15px;
-    width: 340px;
+    width: 90vw;
     border-radius: 25px; 
     border: 1px solid #00AAA9;
     background-color: transparent;
@@ -81,4 +82,18 @@ textarea{
     font-size: 14px;
     color:black;
     margin: 30px;
+}
+
+
+/* Media Query for skærmstørrelser over 800px */
+@media only screen and (min-width: 800px) {
+
+    .submit{
+        font-size: 15px;
+
+    }
+
+
+
+
 }

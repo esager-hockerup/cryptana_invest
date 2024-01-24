@@ -56,16 +56,63 @@
     width: auto;
     z-index: 4;
     top: 55%;
+    margin-left: -3px;
 }
 
 .google-img{
     position: absolute;
     height: 120px;
     z-index: 4;
-    top: 45%;
+    top: 46%;
     left: 40%;
 }
 
 .slider-buttons{
     display: none;
 }
+
+
+ /* responsiv navigation for desktop */
+ @media (min-width: 620px){
+
+    .overlay-txt{
+        top: 35%; 
+        left: 47%; 
+        font-size: 50px;
+    }
+
+    .slider-txt{
+        font-size: 18px;
+        width: 80%;
+        top: 47%; 
+        left: 47%;
+    }
+
+    .apple-img{
+        height: 180px;
+        top: 55%;
+        margin-left: -8px;
+    }
+    
+    .google-img{
+        height: 180px;
+        top: 42%;
+        left: 40%;
+    }
+ }
+
+ @media (min-width: 910px){
+
+    .apple-img{
+        height: 200px;
+        top: 52%;
+        margin-left: 2px;
+    }
+    
+    .google-img{
+        height: 200px;
+        top: 38%;
+        left: 25%;
+    }
+
+ }

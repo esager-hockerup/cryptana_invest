@@ -21,19 +21,21 @@
  /* SECTION KOM HURTIGT I GANG */
 
  .start-now{
-    margin-left: 15px;
     margin-top: 40px;
+    text-align: center;
     
  }
 
  .head-start{
     color: #00AAA9;
     font-size: 20px;
+    text-align: center;
  }
 
  .txt-start{
     font-size: 12px;
     width: 100%;
+    text-align: center;
  }
 
 .btn-start{
@@ -53,3 +55,35 @@
    margin-bottom: 50px;
 }
 
+
+/* responsiv navigation for desktop */
+
+
+@media screen and (min-width: 1082px) {
+
+   .start-now{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      margin-right: 100px;
+      margin-bottom: 60px;
+   }
+
+   .head-start{
+      width: 100%;
+      text-align: center;
+   }
+
+   .txt-start{
+      margin-left: -100px;
+   }
+
+   .btn-start{
+      width: 280px;
+      height: 40px;
+      border-radius: 30px;
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+}
