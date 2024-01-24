@@ -12,6 +12,14 @@ video{
     position: relative;
 }
 
+video::-webkit-media-controls-timeline{
+    display: none;
+}
+
+video::-webkit-media-controls{
+    display: none;
+}
+
 /* Flex - Space-between */
 
 nav{

@@ -1,0 +1,84 @@
+.formular {
+    width: 100%;
+    margin: auto;
+}
+
+
+.formular-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+.form-txt{
+    color: #00AAA9;
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#submit-fom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    display: block;
+    margin-bottom: 30px;
+    width: 340px;
+    height: 40px;
+    border-radius: 25px; 
+    border: 1px solid #00AAA9;
+    background-color: transparent;
+}
+
+::placeholder {
+    color: #707070;
+    padding: 10px;
+}
+
+textarea{
+    display: block;
+    margin-bottom: 15px;
+    width: 340px;
+    border-radius: 25px; 
+    border: 1px solid #00AAA9;
+    background-color: transparent;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.submit {
+    border: none;
+    background-color: #5CD09A;
+    color: #F5EEE5;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight:500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-top: 25px;
+}
+
+.submit:hover {
+    background-color: #025d32;
+}
+
+.hidden {
+    display: none;
+}
+
+.msg {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color:black;
+    margin: 30px;
+}

@@ -1,0 +1,102 @@
+footer {
+    background-color: #00AAA9;
+    height: auto; 
+    width: 100%;
+}
+
+.footer-wrap{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr) ) ;
+}
+
+.logo-footer{
+    color: white;    
+    font-family: 'Jost', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+    margin-top: 20px;
+}
+
+.contact-info{
+    color: white; 
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    inline-size: 2;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.footer-head{
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+}
+
+.icon-head{
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.icon{
+    height: 40px;
+    width: auto;
+    margin-left: 5px;
+    margin-bottom: 50px;
+}
+
+
+.a-link {
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.a-link:hover{
+    color: #5CD09A;
+}
+
+
+
+@media only screen and (min-width: 800px){
+    footer{
+        width: 100%;
+        margin-bottom: 0px;
+    }
+      .wrapper-foot{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+
+    .contact, .logo-footer{
+        margin-top: auto;
+        margin-bottom: 0 auto;
+    
+    }
+    
+    .icons-footer{
+        margin-top: auto;        
+        margin-bottom: auto;
+    }
+    
+    .contact{
+        margin-top: 60px;
+    }
+
+
+    
+    .footer-img{
+        width: 180px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+}

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/burgermenu.css">
     <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/formular.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!-- JAVASCRIPT -->
     <script src="javascript/burger.js" defer></script>    
@@ -89,24 +92,78 @@
         <!-- SECTION MED CARDS END -->
 
         <!-- SLIDER SECTION -->
-        
-
-        
+        <div class="slider" >
+            <h1 class="overlay-txt">Download vores app</h1>
+            <p class="slider-txt">Følg kurser på dine investeringer og hold styr på din portfolio</p>
+            <img class="apple-img" src="/assets/app_store.png" alt="download-via-apple"> <img class="google-img" src="/assets/google-play.png" alt="download-via-google">
+            <div class="slider-slides">
+                <img class="slider-slide" src="assets/pexels-anna-nekrashevich-6801872.jpg" alt="">
+            </div>
+            <div class="overlay-color"></div>
+            <div class="slider-buttons">
+                <button class="previous">Tilbage</button>
+                <button class="next">Frem</button>
+            </div>
+        </div>
         <!-- SLIDER SECTION END -->
 
+        <!-- FORMULAR -->
+
+        <section class="formular">
+            <div class="formular-txt">
+                <p class="form-txt">Spørg din invest ekspert</h1>
+            </div>
         
+            <form id="submit-fom">
+                <label>
+                    <input type="text" name="firstname" required minlength="5" maxlength="30" placeholder="Navn">
+                </label>
+        
+                <label>
+                    <input type="email" name="email" placeholder="Email" required>
+                </label>
+        
+                <textarea name="why" id="why" cols="100" rows="15" 
+                placeholder="Spørgsmål" class="txt-input" required></textarea>
+        
+                <input type="submit" value="Send" class="submit">
+            </form>
 
+            <div class="msg"></div>
+        </section>
+        <!-- FORMULAR END -->
+        <!-- FOOTER START -->
+        <footer>
+            <div class="footer-wrap">
+                <div class="logo-footer">
+                   <p class="logo-footer">Cryptana Inverst</p>
+                </div>
 
+                <div class="adresse">
+                    <div class="info">
+                        <p class="contact-info">Investervej 45, </br> 
+                            2900 Hellerup,</br>
+                            Danmark
+                         </p>
+                    </div>
+                    <div class="contact">
+                        <h2 class="footer-head">Kontakt os</h2> 
+                        <p class="contact-info">kontakt@invest.dk  </br> 
+                            tlf.: +45 30 48 58 47</p>
+                       
+                    </div>
+                </div>
 
-
-
-
-
-
-
-
-
+                <div class="icons-footer">
+                    <h2 class="icon-head">Følg os</h2>
+                    <a href="linkpoint.html">  <img class="icon" src="assets/facebook.png" alt="facebook-icon"></a>
+                    <a href="linkpoint.html"> <img class="icon" src="assets/instagram.png" alt="instagram-icon"></a>
+                    <a href="linkpoint.html"> <img class="icon" src="assets/linkedin.png" alt="linkedin-icon"></a>
+                </div>
+                
+        </div>
+    </footer>
+    <!-- FOOTEr END -->
     </div>
-    
 </body>
 </html>
