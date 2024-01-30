@@ -1,46 +1,53 @@
-const sliderSection = document.querySelector('.slides')
-
 let slideData = [
     {
         src : './assets/app_download.jpg',
-        alt : 'Et billede af en mand, der sidder og kigger på forskellige kurver inden for valuta',
-        header : 'Download vores app',
-        description : 'Følg kurser på dine investeringer og hold styr på din portfolio'
+        alt : 'Billede 1',
+        description : 'Beskrivelse til billede 1', 
+        class : 'test',
+        cta : 'https://www.google.dk',
+        number : '1 ud af 3'
+        
     },
     {
         src : './assets/dream_big.jpg',
-        alt : 'Et billede af et kærestepar, der sidder sammen på en sofa i stuen og kigger på en computer og er meget glade',
-        header : 'Investér i din fremtid',
-        description : 'Brug en sikker samarbejdspartner, der holder styr på din portfolio </br> Vælg en sikker kurs med Cryptana Invest'
-
+        alt : 'Billede 2',
+        description : 'Beskrivelse til billede 2', 
+        class : 'test',
+        cta : 'https://www.google.dk',
+        number : '2 ud af 3'
     },
     {
         src : './assets/get_help.jpg',
-        alt : 'Et billede af en kvinde, der sidder ved computeren og snakker i telefon, for at få hjælp til at vælge de rigtige investeringer',
-        header : 'Kontakt din ekspert',
-        description : 'Cryptana Invest har døgnservice </br> Følg dine investeringer, og få råd fra vores eksperter når det passer dig </br> Hold kursen klar med Cryptana Invest'
-
+        alt : 'Billede 3',
+        description : 'Beskrivelse til billede 3', 
+        class : 'test',
+        cta : 'https://www.google.dk',
+        number : '3 ud af 3'
     }
-]
+] 
+
+const sliderContainer = document.querySelector('.slides')
+
 
 slideData.forEach((slide) => {
-    sliderSection.innerHTML += `
-    <div class="single-slide">
-
-        <h1 class="overlay-txt">${slide.header}</h1>
-        <p class="slider-txt">${slide.description}</p>
-        <div class="slider-slides">
-            <img class="slider-slide" src="${slide.src}" alt="">
+    sliderContainer.innerHTML += `
+    <div class="single-slide">  
+        <div class="display">${slide.number}</div>
+        <div class="slide-content">
+        <p class="${slide.test}"> ${slide.description}</p>
         </div>
-        <div class="overlay-color"></div>
+        <img src="${slide.src}" alt="${slide.alt}">
+        <a href="${slide.cta}"><button class="cta-btn">læs mere her</button></a>
+
+
     </div>
     `
 })
 
-const slides = document.querySelector('.slides .sinlge-slide')
-const nextBtn = document.querySelector('.next')
-const previousBtn = document.querySelector('.previous')
 
+const slides = document.querySelectorAll('#slider01 .single-slide');
+const nextBtn = document.querySelector('[data-direction=next]');
+const previousBtn = document.querySelector('[data-direction=previous]');
 
 let slidesLength = slides.length - 1; /* Index'et på sidste billede i slideren */
 let currentImageIndex = 0;
@@ -58,4 +65,67 @@ const setActiveSlide = (index) => { /* Funktionen bestemmer hvilket billede der 
 
     /* display.textContent = `${index + 1} udaf ${slidesLength + 1}`; */
 };
+
+
+const next = () => {    
+
+    if(currentImageIndex >= slidesLength){
+        currentImageIndex = 0;
+    } else {
+        currentImageIndex += 1;
+    }
+
+    setActiveSlide(currentImageIndex); //Skal køres hver gang der trykkes på knapperne, for at registrere at currentImageIndex nu er noget andet, og at slideren skal skifte op eller ned
+
+};
+
+const previous = () => {
+
+    if(currentImageIndex === 0){
+        currentImageIndex = slidesLength;
+    } else {
+        currentImageIndex -= 1;
+    }
+
+    /* 
+    currentImageIndex = currentImageIndex === 0 ? slidesLength : currentImageIndex -= 1;
+    */
+
+    setActiveSlide(currentImageIndex);
+
+};
+
+//kører next funktionen hver 3 sekund. 
+setInterval(next, 3000);
+
+// Stop intervallet, når der klikkes på næste eller forrige knap
+nextBtn.addEventListener('click', function () {
+    clearInterval(intervalId);
+});
+
+previousBtn.addEventListener('click', function () {
+    clearInterval(intervalId);
+});
+
+/* Hvis funktionerne eksisterer */
+if(nextBtn && previousBtn) {
+
+    nextBtn.addEventListener('click', next);
+    previousBtn.addEventListener('click', previous);
+
+}
+
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight') {
+        // Piletast mod højre
+        next();
+    } else if (event.key === 'ArrowLeft') {
+        // Piletast mod venstre
+        previous();
+    }
+});
+
+/* Skriv denne lige efter setActiveSlide funktionen er skrevet - så vises der et billede med det samme*/
+setActiveSlide(currentImageIndex); /* Skal køres, for at vise et billede til at starte med */
 

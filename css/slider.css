@@ -1,6 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
 
+    Vores Overordnede slider komponent
 
-.slider .slides .single-slide{
+*/
+.slider-wrapper {
+    margin: 20px;
+    height: 100vh;
+}
+
+/* 
+
+    Vores Slider Buttons område
+
+*/
+
+.slider-buttons {
+
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-buttons button {
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+/* 
+
+    Vores slider´s slide
+
+*/
+
+.slider-wrapper .slides .single-slide{
     
     position: relative;
     display: none; /* Slides er som udgangspunkt display:none - Kun når de får class'en 'active', bliver de vist */
@@ -25,117 +63,125 @@
 
 }
 
-.overlay-txt {
-    width: 80%;
-    display: flex;
-    justify-content: left;
-    align-items: left;;
-    top: 40%; 
-    left: 47%; 
-    transform: translate(-50%, -50%); 
-    position: absolute;
-    font-family: 'Jost', sans-serif;
-    color: #ffffff;
-    font-size: 30px;
-    font-weight: 500;
-    z-index: 3; 
-}
+/* 
 
-.slider-txt{
-    color: white;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    width: 80%;
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-    top: 47%; 
-    left: 47%; 
-    transform: translate(-50%, -50%); 
-    position: absolute; 
-    z-index: 3; 
-}
+    Vores slider´s slide, img
 
-.overlay-color{
-    background-color: #00000065 ;
-    position: absolute;
-    z-index: 2;
+*/
+
+.slider-wrapper .slides .single-slide img {
     width: 100%;
-    height: 90vh;
-    top:0%;
-}
-
-.slider .slider-slides .slider-slide {
-    height: 90vh;
-    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.apple-img{
-    position: absolute;
-    height: 120px;
-    width: auto;
-    z-index: 4;
-    top: 55%;
-    margin-left: -3px;
+/* 
+
+    Vores slider´s slide, img når slider er active.
+
+*/
+.slider-wrapper .slides .single-slide.active img{
+
+    border-radius: 32px;
+
 }
 
-.google-img{
+/* 
+
+    Vores slider´s slide, content område.
+
+*/
+.slider-wrapper .slides .slide-content {
+
     position: absolute;
-    height: 120px;
-    z-index: 4;
-    top: 46%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    
+    color: rgb(218, 127, 219);
+    text-align: center;
+    top: 45%;
+    
+}
+
+/* 
+
+    Vores slider´s , display område.
+
+*/
+.slider-wrapper .slides .display
+{
+
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    height: 32px;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    
+    background-color: rgba(255, 255, 255, .4);
+    color: black;
+    
+    padding-left: 30px;
+    left: 0%;
+    
+    border-radius: 32px 0 32px 0;
+    border-right: 2px solid rgba(255, 255, 255, .4);
+    border-bottom: 2px solid rgba(255, 255, 255, .4);
+
+}
+
+.display{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    width: 120px;
+    height: 32px;
+    
+    background-color: rgba(255, 255, 255, .4);
+    color: black;
+    
+    padding-left: 32px;
+    
+    border-radius: 32px 0 32px 0;
+    border-right: 2px solid rgba(255, 255, 255, .4);
+    border-bottom: 2px solid rgba(255, 255, 255, .4);
+
+}
+
+
+
+
+.cta-btn {
+    background-color: rgba(205, 86, 207, 0.742);
+    border-radius: 25px ;
+    color: white;
+    width: 300px;
+    height: 50px;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 20px;
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    top: 60%;    
     left: 40%;
+    cursor: pointer;
+
+
 }
 
-.slider-buttons{
-    display: none;
+
+@keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
 }
-
-
- /* responsiv navigation for desktop */
- @media (min-width: 620px){
-
-    .overlay-txt{
-        top: 35%; 
-        left: 47%; 
-        font-size: 50px;
-    }
-
-    .slider-txt{
-        font-size: 18px;
-        width: 80%;
-        top: 47%; 
-        left: 47%;
-    }
-
-    .apple-img{
-        height: 180px;
-        top: 55%;
-        margin-left: -8px;
-    }
-    
-    .google-img{
-        height: 180px;
-        top: 42%;
-        left: 40%;
-    }
- }
-
- @media (min-width: 910px){
-
-    .apple-img{
-        height: 200px;
-        top: 52%;
-        margin-left: 2px;
-    }
-    
-    .google-img{
-        height: 200px;
-        top: 38%;
-        left: 25%;
-    }
-
- }
