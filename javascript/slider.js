@@ -2,27 +2,27 @@ let slideData = [
     {
         src : './assets/app_download.jpg',
         alt : 'Billede 1',
-        description : 'Beskrivelse til billede 1', 
+        header : 'Download vores app', 
+        text : 'Følg kurser på dine investeringer og hold styr på din portfolie',
         class : 'test',
         cta : 'https://www.google.dk',
-        number : '1 ud af 3'
         
     },
     {
         src : './assets/dream_big.jpg',
         alt : 'Billede 2',
-        description : 'Beskrivelse til billede 2', 
+        header : 'Investér i din fremtid', 
+        text : 'Brug en sikker samarbejdspartner, der holder styr på din potfolio</br> Vælg en sikker kurs med Cryptana Invest',
         class : 'test',
         cta : 'https://www.google.dk',
-        number : '2 ud af 3'
     },
     {
         src : './assets/get_help.jpg',
         alt : 'Billede 3',
-        description : 'Beskrivelse til billede 3', 
+        header : 'Kontakt din ekspert ',
+        text : 'Cryptana Invest har døgnservice </br> Følg dine investeringer, og få råd fra vores eksperter når det passer dig</br> Hold kursen klar med Cryptana Invest', 
         class : 'test',
         cta : 'https://www.google.dk',
-        number : '3 ud af 3'
     }
 ] 
 
@@ -31,15 +31,14 @@ const sliderContainer = document.querySelector('.slides')
 
 slideData.forEach((slide) => {
     sliderContainer.innerHTML += `
+    <div class="display"></div>
     <div class="single-slide">  
-        <div class="display">${slide.number}</div>
         <div class="slide-content">
-        <p class="${slide.test}"> ${slide.description}</p>
+        <p class="${slide.test}"> ${slide.header}</p>
+        <p class="text">${slide.text}</p>
         </div>
-        <img src="${slide.src}" alt="${slide.alt}">
+        <img class="slide-pic" src="${slide.src}" alt="${slide.alt}">
         <a href="${slide.cta}"><button class="cta-btn">læs mere her</button></a>
-
-
     </div>
     `
 })
@@ -52,7 +51,7 @@ const previousBtn = document.querySelector('[data-direction=previous]');
 let slidesLength = slides.length - 1; /* Index'et på sidste billede i slideren */
 let currentImageIndex = 0;
 
-/* const display = document.querySelector('.display'); */
+const display = document.querySelector('.display');
 
 
 const setActiveSlide = (index) => { /* Funktionen bestemmer hvilket billede der vises - fat arrow function - parantes og pil, så er det en funktion*/
@@ -63,7 +62,9 @@ const setActiveSlide = (index) => { /* Funktionen bestemmer hvilket billede der 
 
     slides[index].classList.add('active'); /* får index fra currentImageIndex variablen, og smider 'active' på denne */
 
-    /* display.textContent = `${index + 1} udaf ${slidesLength + 1}`; */
+    display.innerHTML = `${index + 1} ud af ${slidesLength + 1}`;
+
+    console.log(index)
 };
 
 
