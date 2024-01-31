@@ -31,11 +31,11 @@ const sliderContainer = document.querySelector('.slides')
 
 slideData.forEach((slide) => {
     sliderContainer.innerHTML += `
-    <div class="display"></div>
+    
     <div class="single-slide">  
         <div class="slide-content">
-        <p class="${slide.test}"> ${slide.header}</p>
-        <p class="text">${slide.text}</p>
+            <p class="${slide.test}"> ${slide.header}</p>
+            <p class="text">${slide.text}</p>
         </div>
         <img class="slide-pic" src="${slide.src}" alt="${slide.alt}">
         <a href="${slide.cta}"><button class="cta-btn">læs mere her</button></a>
@@ -44,7 +44,7 @@ slideData.forEach((slide) => {
 })
 
 
-const slides = document.querySelectorAll('#slider01 .single-slide');
+const slides = document.querySelectorAll('.single-slide');
 const nextBtn = document.querySelector('[data-direction=next]');
 const previousBtn = document.querySelector('[data-direction=previous]');
 
