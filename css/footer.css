@@ -10,7 +10,6 @@ footer {
     align-items: center;
     text-align: center;
     grid-gap: 30px;
-    grid-template-columns: repeat(auto-fill, minmax(375px, 1fr) ) ;
 }
 
 .logo-footer{
@@ -69,19 +68,26 @@ footer {
 {
     footer {
         height: 40%; 
-        padding-top: 20px;
+        padding: 40px;
     }
     .footer-wrap{
-       
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr) ) ;
-            
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        text-align: start;
+                    
     }
 
     .contact-info, .footer-head{
-        display: flex;
+        display: grid;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
-        text-align: start;
+        align-items: end;
+        text-align: center;
+    }
+
+    .icon{
+      
+        margin-bottom: 10px;
     }
 }

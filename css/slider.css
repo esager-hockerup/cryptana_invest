@@ -10,7 +10,7 @@
 */
 .slider-wrapper {
     margin: 20px;
-    height: 100vh;
+    height: 80vh;
 }
 
 /* 
@@ -21,9 +21,8 @@
 
 .slider-buttons {
 
-    margin: 10px 0 0 0;
-    display: flex;
-    justify-content: space-between;
+    display: none;
+
 }
 
 .slider-buttons button {
